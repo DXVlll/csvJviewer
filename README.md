@@ -1,7 +1,7 @@
 # csvJviewer
-Simple csv java viewer (not editor). It works only with semicolon-separated values.
+Simple offline java csv viewer (not editor). It works only with semicolon-separated values.
 
-If you want to test this program, you must navigate to folder "csv viewer" through the command line and then enter these two commands:
+If you want to test this program, you should download code, then navigate to folder "csv viewer" through the command line and then enter these two commands:
 
 javac -sourcepath src -d bin -classpath lib src/CSV518/simpleViewer/CSVmain.java
 
