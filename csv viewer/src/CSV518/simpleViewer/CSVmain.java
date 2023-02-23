@@ -26,9 +26,9 @@ public class CSVmain{
                     "phone"
         };
 	public static String[][] data = {
-                    {"Jonh", "mcMood", "haha@gmail.com", "+123 321"},
-                    {"Jack", "Young", "sample@gmail.com", "+370 000 000 00"},
-                    {"Lack", "Northland", "Fold@gmail.com", "+456 789 123 21"},
+                    {"Name1", "surname1", "mail1", "phone1"},
+                    {"Name2", "surname2", "mail2", "phone2"},
+                    {"Name3", "surname3", "mail3", "phone3"},
         };
 		static JTable tab = new JTable(data, columnNames);
 		static JScrollPane scrollPane;
