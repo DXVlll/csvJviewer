@@ -1,0 +1,5 @@
+Simple csv javascript viewer (not editor). It works only with semicolon-separated values.
+
+If you want to test this program, you must open some.html with browser.
+
+Once you run the program, you will be able to select and open .csv files.

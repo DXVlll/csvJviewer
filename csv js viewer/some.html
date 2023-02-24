@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.but {text-align:center;}
+			table {
+			  width: 50%;
+			  border: 1px solid;
+			  border-collapse: collapse;
+			  text-align:center;
+			}
+			td, th {
+				Width: 1px;
+				border: 1px solid;
+				border-collapse: collapse;
+			}
+		</style>
+		<script>
+		 	var stage = 0;
+			function triggerInput(){
+				var myInput = document.getElementById ("in"); 
+				myInput.click();
+				myInput.onchange = function () {
+							console.log(stage);
+							++stage;
+							showFile(myInput);
+							}
+			}
+			function showFile(inputTypeFile){
+				var files = inputTypeFile.files;
+				console.log("stage: " + stage);
+				if (files != null){
+					if (files.length > 0){
+						for (let i = 0; i < files.length; ++i){
+							console.log(files[i]);
+						}
+						var fr = new FileReader();
+						fr.onload=function(){
+							var text = fr.result;
+							text = text.replaceAll("\n", "</th></tr><tr><th>");
+							text = text.replaceAll(';', "</th><th>");
+							var tmp  = "<tr><th>";
+							text = tmp.concat(text, "</th></tr>");
+							text = text.replaceAll("<th> </th>", "OOO");
+							document.getElementById('table1').innerHTML   = text;
+							return;
+						}
+						fr.readAsText(files[0]);
+						return;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="but">
+			<button type="button" id="import" onclick="triggerInput()"> Select CSV file </button>
+		</div>
+		<input type="file" accept=".csv" id="in" hidden="true">  </input>
+		<p id="out"> </p>
+		<table align="center"; id="table1"> </table>
+		
+	</body>
+</html>
