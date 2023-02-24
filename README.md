@@ -1,6 +1,7 @@
-# csvJviewer
+# csv viewer
 
-About 'csv viewer' folder:
+<p style="font-size:20px;">About 'csv viewer' folder:</p>
+
 <div style=”margin-left:20px;”> 
 Simple offline java csv viewer (not editor). It works only with semicolon-separated values.
 
@@ -13,7 +14,7 @@ java -classpath ./bin CSV518/simpleViewer/CSVmain
 Once you run the program, you will be able to select and open .csv files, edit existing fields (but not add new ones!) and save the current table as a .csv file.
 </div>
 
-About'csv js viewer' folder:
+<p style="font-size:20px;">About'csv js viewer' folder:</p>
 <div style=”margin-left:20px;”> 
 Simple csv javascript viewer (not editor). It works only with semicolon-separated values.
 
